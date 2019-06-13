@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `northwind`.`Order Details`.`OrderID` AS `OrderID`,sum(((((`northwind`.`Order Details`.`UnitPrice` * `northwind`.`Order Details`.`Quantity`) * (1 - `northwind`.`Order Details`.`Discount`)) / 100) * 100)) AS `Subtotal` from `northwind`.`Order Details` group by `northwind`.`Order Details`.`OrderID`
+md5=a18f9e2bb773080b6f1562b0d1b6635a
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2019-06-12 02:09:25
+create-version=1
+source=SELECT `Order Details`.OrderID, \nSum((`Order Details`.UnitPrice*Quantity*(1-Discount)/100)*100) AS Subtotal\nFROM `Order Details`\nGROUP BY `Order Details`.OrderID
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `northwind`.`Order Details`.`OrderID` AS `OrderID`,sum(((((`northwind`.`Order Details`.`UnitPrice` * `northwind`.`Order Details`.`Quantity`) * (1 - `northwind`.`Order Details`.`Discount`)) / 100) * 100)) AS `Subtotal` from `northwind`.`Order Details` group by `northwind`.`Order Details`.`OrderID`

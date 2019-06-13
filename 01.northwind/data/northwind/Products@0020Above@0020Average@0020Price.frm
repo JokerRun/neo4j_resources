@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `northwind`.`Products`.`ProductName` AS `ProductName`,`northwind`.`Products`.`UnitPrice` AS `UnitPrice` from `northwind`.`Products` where (`northwind`.`Products`.`UnitPrice` > (select avg(`northwind`.`Products`.`UnitPrice`) from `northwind`.`Products`))
+md5=1a0b844c62a2052a3e1c804c83bbf3ba
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2019-06-12 02:09:25
+create-version=1
+source=SELECT Products.ProductName, \n       Products.UnitPrice\nFROM Products\nWHERE Products.UnitPrice>(SELECT AVG(UnitPrice) From Products)
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `northwind`.`Products`.`ProductName` AS `ProductName`,`northwind`.`Products`.`UnitPrice` AS `UnitPrice` from `northwind`.`Products` where (`northwind`.`Products`.`UnitPrice` > (select avg(`northwind`.`Products`.`UnitPrice`) from `northwind`.`Products`))

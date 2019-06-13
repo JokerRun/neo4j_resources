@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `northwind`.`Orders`.`OrderID` AS `OrderID`,`northwind`.`Orders`.`CustomerID` AS `CustomerID`,`northwind`.`Orders`.`EmployeeID` AS `EmployeeID`,`northwind`.`Orders`.`OrderDate` AS `OrderDate`,`northwind`.`Orders`.`RequiredDate` AS `RequiredDate`,`northwind`.`Orders`.`ShippedDate` AS `ShippedDate`,`northwind`.`Orders`.`ShipVia` AS `ShipVia`,`northwind`.`Orders`.`Freight` AS `Freight`,`northwind`.`Orders`.`ShipName` AS `ShipName`,`northwind`.`Orders`.`ShipAddress` AS `ShipAddress`,`northwind`.`Orders`.`ShipCity` AS `ShipCity`,`northwind`.`Orders`.`ShipRegion` AS `ShipRegion`,`northwind`.`Orders`.`ShipPostalCode` AS `ShipPostalCode`,`northwind`.`Orders`.`ShipCountry` AS `ShipCountry`,`northwind`.`Customers`.`CompanyName` AS `CompanyName`,`northwind`.`Customers`.`Address` AS `Address`,`northwind`.`Customers`.`City` AS `City`,`northwind`.`Customers`.`Region` AS `Region`,`northwind`.`Customers`.`PostalCode` AS `PostalCode`,`northwind`.`Customers`.`Country` AS `Country` from (`northwind`.`Customers` join `northwind`.`Orders` on((`northwind`.`Customers`.`CustomerID` = `northwind`.`Orders`.`CustomerID`)))
+md5=d121549c1181b6c3a8aa180886e768a5
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2019-06-12 02:09:25
+create-version=1
+source=SELECT Orders.OrderID,\n       Orders.CustomerID,\n       Orders.EmployeeID, \n       Orders.OrderDate, \n       Orders.RequiredDate,\n       Orders.ShippedDate, \n       Orders.ShipVia, \n       Orders.Freight,\n       Orders.ShipName, \n       Orders.ShipAddress, \n       Orders.ShipCity,\n       Orders.ShipRegion,\n       Orders.ShipPostalCode,\n       Orders.ShipCountry,\n       Customers.CompanyName,\n       Customers.Address,\n       Customers.City,\n       Customers.Region,\n       Customers.PostalCode, \n       Customers.Country\nFROM Customers \n     JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `northwind`.`Orders`.`OrderID` AS `OrderID`,`northwind`.`Orders`.`CustomerID` AS `CustomerID`,`northwind`.`Orders`.`EmployeeID` AS `EmployeeID`,`northwind`.`Orders`.`OrderDate` AS `OrderDate`,`northwind`.`Orders`.`RequiredDate` AS `RequiredDate`,`northwind`.`Orders`.`ShippedDate` AS `ShippedDate`,`northwind`.`Orders`.`ShipVia` AS `ShipVia`,`northwind`.`Orders`.`Freight` AS `Freight`,`northwind`.`Orders`.`ShipName` AS `ShipName`,`northwind`.`Orders`.`ShipAddress` AS `ShipAddress`,`northwind`.`Orders`.`ShipCity` AS `ShipCity`,`northwind`.`Orders`.`ShipRegion` AS `ShipRegion`,`northwind`.`Orders`.`ShipPostalCode` AS `ShipPostalCode`,`northwind`.`Orders`.`ShipCountry` AS `ShipCountry`,`northwind`.`Customers`.`CompanyName` AS `CompanyName`,`northwind`.`Customers`.`Address` AS `Address`,`northwind`.`Customers`.`City` AS `City`,`northwind`.`Customers`.`Region` AS `Region`,`northwind`.`Customers`.`PostalCode` AS `PostalCode`,`northwind`.`Customers`.`Country` AS `Country` from (`northwind`.`Customers` join `northwind`.`Orders` on((`northwind`.`Customers`.`CustomerID` = `northwind`.`Orders`.`CustomerID`)))

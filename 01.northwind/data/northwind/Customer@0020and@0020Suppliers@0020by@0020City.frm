@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `northwind`.`Customers`.`City` AS `City`,`northwind`.`Customers`.`CompanyName` AS `CompanyName`,`northwind`.`Customers`.`ContactName` AS `ContactName`,\'Customers\' AS `Relationship` from `northwind`.`Customers` union select `northwind`.`Suppliers`.`City` AS `City`,`northwind`.`Suppliers`.`CompanyName` AS `CompanyName`,`northwind`.`Suppliers`.`ContactName` AS `ContactName`,\'Suppliers\' AS `Suppliers` from `northwind`.`Suppliers` order by `City`,`CompanyName`
+md5=c3cd8d1297f2918a10b3acbcd7f8e6e2
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2019-06-12 02:09:25
+create-version=1
+source=SELECT City, \n       CompanyName, \n       ContactName, \n       \'Customers\' AS Relationship \nFROM Customers\nUNION \nSELECT City, \n       CompanyName, \n       ContactName, \n       \'Suppliers\'\nFROM Suppliers \nORDER BY City, CompanyName
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_general_ci
+view_body_utf8=select `northwind`.`Customers`.`City` AS `City`,`northwind`.`Customers`.`CompanyName` AS `CompanyName`,`northwind`.`Customers`.`ContactName` AS `ContactName`,\'Customers\' AS `Relationship` from `northwind`.`Customers` union select `northwind`.`Suppliers`.`City` AS `City`,`northwind`.`Suppliers`.`CompanyName` AS `CompanyName`,`northwind`.`Suppliers`.`ContactName` AS `ContactName`,\'Suppliers\' AS `Suppliers` from `northwind`.`Suppliers` order by `City`,`CompanyName`
